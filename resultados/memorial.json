@@ -1,0 +1,347 @@
+{
+  "a": {
+    "A": [
+      [
+        -666.6666666666667,
+        -70.83333333333334
+      ],
+      [
+        202.38095238095238,
+        -0.3571428571428571
+      ]
+    ],
+    "B": [
+      833.3333333333334,
+      0.0
+    ],
+    "E": [
+      0.0,
+      -2380.9523809523807
+    ],
+    "C": [
+      0.0,
+      1.0
+    ],
+    "traco": -667.0238095238096,
+    "det": 14573.412698412692,
+    "autovalores": [
+      -644.4086366834565,
+      -22.615172840353143
+    ],
+    "tau_e_ms": 1.5518103623605148,
+    "tau_m_ms": 44.21810114206426,
+    "razao_tau": 28.494526273688823,
+    "L_sobre_R_ms": 1.4999999999999998,
+    "tau_m_simplificada_ms": 45.74540503744043,
+    "Co": [
+      [
+        833.3333333333334,
+        -555555.5555555556
+      ],
+      [
+        0.0,
+        168650.79365079367
+      ]
+    ],
+    "posto_Co": 2,
+    "det_Co": 140542328.0423283,
+    "Ob": [
+      [
+        0.0,
+        1.0
+      ],
+      [
+        202.38095238095238,
+        -0.3571428571428571
+      ]
+    ],
+    "posto_Ob": 2,
+    "det_Ob": -202.3809523809524
+  },
+  "b": {
+    "bw": 0.06749999999999999,
+    "i_ss": 3.7352941176470584,
+    "Ke_w": 38.25,
+    "R_i": 2.988235294117647,
+    "V_ss": 41.23823529411764,
+    "folga_V": 6.7617647058823565,
+    "folga_V_pct": 14.087009803921575,
+    "i_pct": 46.69117647058823,
+    "folga_i": 4.264705882352942,
+    "w_max_vazio": 564.7058823529411,
+    "w_max_com_carga": 528.2505105513953,
+    "aceleracao_max_rad_s2": 761.904761904762
+  },
+  "c": {
+    "amostras_por_tau_m": 22.10905057103213,
+    "amostras_por_tau_e": 0.7759051811802574,
+    "Ts_max_regra_10": 4.421810114206426,
+    "Ts_min_regra_20": 2.210905057103213,
+    "fs_Hz": 500.0,
+    "banda_malha_fechada_Hz": 10.26295665598123
+  },
+  "controle": {
+    "ganhos": {
+      "Kp": 10.1,
+      "Ki": 125.0,
+      "Kd": 0.23,
+      "Tf": 0.001,
+      "beta": 0.55,
+      "Kaw": 0.3
+    },
+    "I_LIM": 7.5,
+    "degrau_junta_rad": 0.1,
+    "K_reduzido": 11.572498298162014,
+    "tau_reduzido_ms": 45.74540503744043,
+    "nominal": {
+      "sobressinal_pct": 0.5353545771851209,
+      "t_acomodacao_s": 0.21800000000000003,
+      "erro_regime_rad": 0.0001185024152885461,
+      "V_max_abs": 11.932065714803013,
+      "i_max_abs": 7.327069028854721
+    },
+    "cenarios": [
+      {
+        "amplitude_rad_motor": 10.0,
+        "T_carga": 0.25,
+        "sobressinal_pct": 0.5353545771851209,
+        "t_acomodacao_s": 0.21800000000000003,
+        "erro_regime_rad": 0.0001185024152885461,
+        "V_max_abs": 11.932065714803013,
+        "i_max_abs": 7.327069028854721
+      },
+      {
+        "amplitude_rad_motor": 10.0,
+        "T_carga": 0.0,
+        "sobressinal_pct": 0.6093937934942062,
+        "t_acomodacao_s": 0.19,
+        "erro_regime_rad": 5.80951890025716e-05,
+        "V_max_abs": 11.856968806525494,
+        "i_max_abs": 7.212368066486724
+      },
+      {
+        "amplitude_rad_motor": 10.0,
+        "T_carga": -0.25,
+        "sobressinal_pct": 1.8824402324160516,
+        "t_acomodacao_s": 0.16200000000000003,
+        "erro_regime_rad": 2.791996016249243e-05,
+        "V_max_abs": 11.385922801753722,
+        "i_max_abs": 7.319833555340282
+      },
+      {
+        "amplitude_rad_motor": -10.0,
+        "T_carga": 0.25,
+        "sobressinal_pct": 1.8824402324160516,
+        "t_acomodacao_s": 0.16200000000000003,
+        "erro_regime_rad": 2.791996016249243e-05,
+        "V_max_abs": 11.385922801753722,
+        "i_max_abs": 7.319833555340282
+      },
+      {
+        "amplitude_rad_motor": -10.0,
+        "T_carga": 0.0,
+        "sobressinal_pct": 0.6093937934942062,
+        "t_acomodacao_s": 0.19,
+        "erro_regime_rad": 5.80951890025716e-05,
+        "V_max_abs": 11.856968806525494,
+        "i_max_abs": 7.212368066486724
+      },
+      {
+        "amplitude_rad_motor": -10.0,
+        "T_carga": -0.25,
+        "sobressinal_pct": 0.5353545771851209,
+        "t_acomodacao_s": 0.21800000000000003,
+        "erro_regime_rad": 0.0001185024152885461,
+        "V_max_abs": 11.932065714803013,
+        "i_max_abs": 7.327069028854721
+      },
+      {
+        "amplitude_rad_motor": 2.0,
+        "T_carga": 0.25,
+        "sobressinal_pct": 0.855795718017438,
+        "t_acomodacao_s": 0.15000000000000002,
+        "erro_regime_rad": 1.972061734134556e-06,
+        "V_max_abs": 6.869802681951512,
+        "i_max_abs": 7.322928995477683
+      },
+      {
+        "amplitude_rad_motor": 2.0,
+        "T_carga": 0.0,
+        "sobressinal_pct": 1.4822967756877192,
+        "t_acomodacao_s": 0.124,
+        "erro_regime_rad": 1.096845761328069e-06,
+        "V_max_abs": 6.6942341757089725,
+        "i_max_abs": 7.198444865255978
+      },
+      {
+        "amplitude_rad_motor": 2.0,
+        "T_carga": -0.25,
+        "sobressinal_pct": 2.8115639681271176,
+        "t_acomodacao_s": 0.188,
+        "erro_regime_rad": 3.2420402011901217e-06,
+        "V_max_abs": 6.628952086018604,
+        "i_max_abs": 7.037790183626423
+      }
+    ],
+    "pior_sobressinal_pct": 2.8115639681271176,
+    "pior_t_acomodacao_s": 0.21800000000000003,
+    "pior_erro_regime_rad": 0.0001185024152885461,
+    "pior_i_A": 7.327069028854721,
+    "pior_V": 11.932065714803013,
+    "sem_antiwindup": {
+      "sobressinal_pct": 94.26672923497118,
+      "t_acomodacao_s": "inf",
+      "erro_regime_rad": 22.960356478195585,
+      "V_max_abs": 22.079835338006042,
+      "i_max_abs": 7.332431648473403
+    },
+    "fora_do_envelope_15rad_carga_neg": {
+      "sobressinal_pct": 15.426004529339275,
+      "t_acomodacao_s": 0.35600000000000004,
+      "erro_regime_rad": 0.0016988002157898308,
+      "V_max_abs": 14.88801905265769,
+      "i_max_abs": 7.322573518558684
+    },
+    "freq_cruzamento_rad_s": 64.4840584690822,
+    "margem_fase_graus": 51.787767679897655,
+    "amostras_por_periodo_cruzamento": 48.71890399231113
+  },
+  "identificacao": {
+    "identificado": {
+      "R": 0.8008668678461627,
+      "L": 0.0011998321186891564,
+      "Ke": 0.08499045941188742,
+      "Kt": 0.08499045941188742,
+      "J": 0.00041883611103859305,
+      "b": 0.00015126284877394727
+    },
+    "nominal": {
+      "R": 0.8,
+      "L": 0.0012,
+      "Ke": 0.085,
+      "Kt": 0.085,
+      "J": 0.00042,
+      "b": 0.00015
+    },
+    "erro_pct": {
+      "R": 0.10835848077032917,
+      "L": -0.013990109236954157,
+      "Ke": -0.01122422130892792,
+      "Kt": -0.01122422130892792,
+      "J": -0.27711641938261206,
+      "b": 0.8418991826315251
+    },
+    "fit_w_pct": 98.70971424333017,
+    "fit_i_pct": 99.82991869193152
+  },
+  "torque_off": {
+    "t_1pct_ms": 6.9099999999998865,
+    "cinco_tau_e_ms": 7.759051811802574,
+    "modelo_verificacao_ms": 8
+  },
+  "d": {
+    "n_combinacoes": 64320,
+    "pior_latencia_ms": 31.959051811802574,
+    "pior_combinacao": {
+      "atraso_sensor_ms": 20.0,
+      "espera_ativacao_ms": 2.0,
+      "ciclos_perdidos": 1,
+      "execucao_ms": 0.2,
+      "corte_torque_ms": 7.759051811802574
+    },
+    "menor_latencia_ms": 6.959999999999886,
+    "todas_cumprem": true,
+    "margem_ms": 68.04094818819743,
+    "ciclos_perdidos_consecutivos_para_violar": 36,
+    "atraso_sensor_para_violar_ms": 88.04094818819743
+  },
+  "verificacao": {
+    "v1": {
+      "n_estados": 32011,
+      "n_transicoes": 349694,
+      "p1_ok": true,
+      "p2_ok": true,
+      "p3_ok": true,
+      "p4_ok": true,
+      "pior_latencia_parada_ms": 31,
+      "pior_resposta_zona_ms": 4
+    },
+    "v0": {
+      "n_estados": 103912,
+      "propriedade_violada": "P1 (REQ-SAFE-AA-001)",
+      "tamanho_contraexemplo_ms": 109
+    },
+    "premissas": {
+      "T_SENSOR": 20,
+      "T_CICLO": 2,
+      "T_APLICA": 1,
+      "T_OFF": 8,
+      "T_TRAVA": 6,
+      "K_RET": 60,
+      "PRAZO": 100,
+      "PRAZO_ZONA": 6
+    }
+  },
+  "req_safe_004": {
+    "w_motor_lim_rad_s": 71.42857142857143,
+    "w_ref_colab_rad_s": 60.714285714285715,
+    "w_antes_rad_s": 449.9958333133171,
+    "v_antes_m_s": 1.5749854165966097,
+    "t_desaceleracao_ms": 666.0,
+    "v_max_depois_m_s": 0.24895373056786677,
+    "w_regime_colab_rad_s": 60.714208107288584,
+    "a_colab_rad_s2": 600.0,
+    "i_pico_desac_A": 3.7361666875490056,
+    "t_resposta_total_ms": 690.5,
+    "distancia_campo_alerta_m": 1.1048
+  },
+  "e": {
+    "n_amostras": 3801,
+    "erro_max_vs_modelo_float32_V": 0.0,
+    "erro_max_vs_modelo_float64_V": 0.00036052720683343864,
+    "bits_iguais_vs_float32": true,
+    "eps_float32": 1.1920928955078125e-07,
+    "escala_saida_V": 48.0,
+    "erro_rel_vs_float64_em_eps": 63.006696072096624,
+    "cota_teorica_V": 0.0006206035614013672,
+    "lsb_pwm_12bits_V": 0.0234375,
+    "malha_fechada_sil": {
+      "sobressinal_pct": 0.5353552987297583,
+      "t_acomodacao_s": 0.21800000000000003,
+      "erro_regime_rad": 0.00011838842255507132,
+      "V_max_abs": 11.932064056396484,
+      "i_max_abs": 7.327068648302571
+    },
+    "malha_fechada_modelo": {
+      "sobressinal_pct": 0.5353545771851209,
+      "t_acomodacao_s": 0.21800000000000003,
+      "erro_regime_rad": 0.0001185024152885461,
+      "V_max_abs": 11.932065714803013,
+      "i_max_abs": 7.327069028854721
+    }
+  },
+  "codigo": {
+    "hash_parametros": "5e0f44118198114b",
+    "hash_modelo": "1362dc10ae851da9",
+    "arquivos": [
+      "gen/auroraarm_junta.h",
+      "gen/auroraarm_junta.c"
+    ]
+  },
+  "recursos": {
+    "compilador": "arm-none-eabi-gcc (15:13.2.rel1-2) 13.2.1 20231009",
+    "text_bytes": 692,
+    "pct_256KB": 0.26397705078125,
+    "instrucoes": {
+      "aa_ctrl_inicializar": 8,
+      "aa_ctrl_passo": 127,
+      "aa_sup_inicializar": 6,
+      "aa_sup_passo": 92
+    },
+    "instrucoes_por_ciclo_total": 219,
+    "ciclos_cpu_cota": 657,
+    "t_exec_cota_us_168MHz": 3.9107142857142856,
+    "pct_orcamento_200us": 1.9553571428571428,
+    "host_ns_por_ciclo": 17.25
+  }
+}

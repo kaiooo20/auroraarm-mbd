@@ -1,0 +1,74 @@
+[
+  {
+    "id": "REQ-CTRL-AA-001",
+    "descricao": "Erro de posição nulo em regime (degrau)",
+    "tipo": "Desempenho",
+    "modelo": "controlador.py: PASSOS e, t5, t8, i_new (ação integral)",
+    "codigo": "gen/auroraarm_junta.c linhas 66, 75-76, 84, 87-88",
+    "teste": "tests/test_controlador.py::test_req_ctrl_001_a_004",
+    "evidencia": "pior erro 1.2e-04 rad em 9 cenários"
+  },
+  {
+    "id": "REQ-CTRL-AA-002",
+    "descricao": "Sobressinal <= 8 %",
+    "tipo": "Desempenho",
+    "modelo": "controlador.py: br, e_p, p_term (beta = 0,55), d_new (D na medição)",
+    "codigo": "gen/auroraarm_junta.c linhas 67, 69-76, 94",
+    "teste": "tests/test_controlador.py::test_req_ctrl_001_a_004; ::test_robustez_inercia",
+    "evidencia": "pior sobressinal 2.81 %"
+  },
+  {
+    "id": "REQ-CTRL-AA-003",
+    "descricao": "Tempo de acomodação <= 300 ms",
+    "tipo": "Desempenho",
+    "modelo": "controlador.py: ganhos (scripts/sintonia.py) + anti-windup t6, t7",
+    "codigo": "gen/auroraarm_junta.c linhas 74-76, 85-86, 88",
+    "teste": "tests/test_controlador.py::test_req_ctrl_001_a_004; ::test_anti_windup_e_necessario",
+    "evidencia": "pior ts 218 ms"
+  },
+  {
+    "id": "REQ-CTRL-AA-004",
+    "descricao": "|V| <= 48 V e |i| <= 8 A sempre",
+    "tipo": "Desempenho (restrição)",
+    "modelo": "controlador.py: fcem, v_hi0, v_lo0, t4..u_sat (janela de corrente + barramento)",
+    "codigo": "gen/auroraarm_junta.c linhas 67-68, 77-83, 94",
+    "teste": "tests/test_controlador.py::test_saturacao_nunca_passa_de_48V_mesmo_com_entrada_absurda",
+    "evidencia": "pior |i| 7.33 A; |V| <= 48 V com entradas aleatórias"
+  },
+  {
+    "id": "REQ-SAFE-AA-001",
+    "descricao": "Mão < 500 mm -> torque zero em <= 100 ms",
+    "tipo": "Segurança (com prazo)",
+    "modelo": "supervisor.py: T1, T3, T6, T8; verificacao.py: P1; controlador.py: u_out",
+    "codigo": "gen/auroraarm_junta.c linhas 89, 115, 119, 126, 130, 133",
+    "teste": "tests/test_verificacao.py::test_v1_satisfaz_todas_as_propriedades; ::test_v0_tem_contraexemplo_de_prazo",
+    "evidencia": "pior latência 31.96 ms (varredura) / 31 ms (model checking)"
+  },
+  {
+    "id": "REQ-SAFE-AA-002",
+    "descricao": "Após parada, só religa com rearme explícito",
+    "tipo": "Segurança",
+    "modelo": "supervisor.py: T5, T7 (única saída para estado com torque); verificacao.py: P2",
+    "codigo": "gen/auroraarm_junta.c linhas 89-91, 123, 127",
+    "teste": "tests/test_verificacao.py::test_checador_detecta_religamento_sem_rearme; tests/test_supervisor_mbt.py::test_invariantes_em_passeio_aleatorio",
+    "evidencia": "P2 verdadeira em 32011 estados"
+  },
+  {
+    "id": "REQ-SAFE-AA-003",
+    "descricao": "Mão removida + rearme -> retorna à trajetória",
+    "tipo": "Vivacidade",
+    "modelo": "supervisor.py: T7, T9; controlador.py: r_prev/v_prev (retomada sem salto); verificacao.py: P3",
+    "codigo": "gen/auroraarm_junta.c linhas 64-65, 92-93, 127, 131",
+    "teste": "tests/test_verificacao.py::test_v1_satisfaz_todas_as_propriedades; ::test_checador_detecta_violacao_de_vivacidade",
+    "evidencia": "P3 verdadeira (nenhum ciclo com obrigação pendente)"
+  },
+  {
+    "id": "REQ-SAFE-AA-004",
+    "descricao": "Velocidade do efetuador <= 250 mm/s na zona colaborativa",
+    "tipo": "Segurança",
+    "modelo": "supervisor.py: T2, T4, saída lim_vel; controlador.py: dr..r (limitador vel./acel.); verificacao.py: P4",
+    "codigo": "gen/auroraarm_junta.c linhas 54-65, 116, 120",
+    "teste": "tests/test_controlador.py::test_modo_colaborativo_limita_velocidade; tests/test_supervisor_mbt.py::test_invariantes_em_passeio_aleatorio",
+    "evidencia": "regime 212 mm/s; desaceleração 666 ms; campo de alerta 1.10 m"
+  }
+]

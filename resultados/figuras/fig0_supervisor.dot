@@ -1,0 +1,21 @@
+digraph G {
+rankdir=TB; bgcolor="white"; nodesep=0.6; ranksep=0.55;
+node [shape=box, style="rounded,filled", fontname="DejaVu Sans", fontsize=11, color="#6b6b6b"];
+edge [fontname="DejaVu Sans", fontsize=9, color="#6b6b6b"];
+inicio [shape=point, width=0.12, color="#2b2b2b"];
+inicio -> REDUZIDA;
+NORMAL [label="NORMAL\nhabilita=1  lim_vel=0", fillcolor="#cde2fb"];
+REDUZIDA [label="REDUZIDA\nhabilita=1  lim_vel=1", fillcolor="#b7d3f6"];
+PARADA [label="PARADA\nhabilita=0  lim_vel=1", fillcolor="#f7c9b5"];
+AGUARDA_REARME [label="AGUARDA_REARME\nhabilita=0  lim_vel=1", fillcolor="#fbe2b0"];
+RETOMADA [label="RETOMADA\nhabilita=1  lim_vel=1", fillcolor="#c6eedc"];
+NORMAL -> PARADA [label="T1: mao=1", color="#6b6b6b", penwidth=1.0, fontcolor="#2b2b2b"];
+NORMAL -> REDUZIDA [label="T2: zona=1", color="#6b6b6b", penwidth=1.0, fontcolor="#2b2b2b"];
+REDUZIDA -> PARADA [label="T3: mao=1", color="#6b6b6b", penwidth=1.0, fontcolor="#2b2b2b"];
+REDUZIDA -> NORMAL [label="T4: zona=0", color="#6b6b6b", penwidth=1.0, fontcolor="#2b2b2b"];
+PARADA -> AGUARDA_REARME [label="T5: mao=0", color="#6b6b6b", penwidth=1.0, fontcolor="#2b2b2b"];
+AGUARDA_REARME -> PARADA [label="T6: mao=1", color="#6b6b6b", penwidth=1.0, fontcolor="#2b2b2b"];
+AGUARDA_REARME -> RETOMADA [label="T7: rearme=1", color="#6b6b6b", penwidth=1.0, fontcolor="#2b2b2b"];
+RETOMADA -> PARADA [label="T8: mao=1", color="#d03b3b", penwidth=2.2, fontcolor="#d03b3b"];
+RETOMADA -> REDUZIDA [label="T9: chegou=1", color="#6b6b6b", penwidth=1.0, fontcolor="#2b2b2b"];
+}

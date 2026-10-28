@@ -1,0 +1,112 @@
+Contraexemplo do supervisor v0 — P1 (REQ-SAFE-AA-001)
+(gerado por auroraarm/verificacao.py; traço de menor comprimento, busca em largura)
+
+t=   1 ms  mao=1 sensor=1 zona=0  torque=ON  relogio_prazo=0 ms
+t=   2 ms  mao=0 sensor=1 zona=0  ciclo PERDIDO (jitter)  torque=ON
+t=   3 ms  mao=0 sensor=1 zona=0  torque=ON
+t=   4 ms  mao=0 sensor=1 zona=0  ciclo: rearme=0 chegou=0  T3 -> PARADA  torque=ON
+t=   5 ms  mao=0 sensor=1 zona=0  torque=DECAINDO
+t=   6 ms  mao=0 sensor=1 zona=0  ciclo: rearme=0 chegou=0  - -> PARADA  torque=DECAINDO
+t=   7 ms  mao=0 sensor=0 zona=0  torque=DECAINDO
+t=   8 ms  mao=1 sensor=0 zona=0  ciclo: rearme=0 chegou=0  T5 -> AGUARDA_REARME  torque=DECAINDO  relogio_prazo=0 ms
+t=   9 ms  mao=1 sensor=0 zona=0  torque=DECAINDO  relogio_prazo=1 ms
+t=  10 ms  mao=1 sensor=0 zona=0  ciclo: rearme=1 chegou=0  T7 -> RETOMADA  torque=DECAINDO  relogio_prazo=2 ms
+t=  11 ms  mao=1 sensor=1 zona=0  torque=ON  relogio_prazo=3 ms
+t=  12 ms  mao=1 sensor=1 zona=0  ciclo: rearme=0 chegou=0  - -> RETOMADA  torque=ON  relogio_prazo=4 ms
+t=  13 ms  mao=1 sensor=1 zona=0  torque=ON  relogio_prazo=5 ms
+t=  14 ms  mao=1 sensor=1 zona=0  ciclo: rearme=0 chegou=0  - -> RETOMADA  torque=ON  relogio_prazo=6 ms
+t=  15 ms  mao=1 sensor=1 zona=0  torque=ON  relogio_prazo=7 ms
+t=  16 ms  mao=1 sensor=1 zona=0  ciclo: rearme=0 chegou=0  - -> RETOMADA  torque=ON  relogio_prazo=8 ms
+t=  17 ms  mao=1 sensor=1 zona=0  torque=ON  relogio_prazo=9 ms
+t=  18 ms  mao=1 sensor=1 zona=0  ciclo: rearme=0 chegou=0  - -> RETOMADA  torque=ON  relogio_prazo=10 ms
+t=  19 ms  mao=1 sensor=1 zona=0  torque=ON  relogio_prazo=11 ms
+t=  20 ms  mao=1 sensor=1 zona=0  ciclo: rearme=0 chegou=0  - -> RETOMADA  torque=ON  relogio_prazo=12 ms
+t=  21 ms  mao=1 sensor=1 zona=0  torque=ON  relogio_prazo=13 ms
+t=  22 ms  mao=1 sensor=1 zona=0  ciclo: rearme=0 chegou=0  - -> RETOMADA  torque=ON  relogio_prazo=14 ms
+t=  23 ms  mao=1 sensor=1 zona=0  torque=ON  relogio_prazo=15 ms
+t=  24 ms  mao=1 sensor=1 zona=0  ciclo: rearme=0 chegou=0  - -> RETOMADA  torque=ON  relogio_prazo=16 ms
+t=  25 ms  mao=1 sensor=1 zona=0  torque=ON  relogio_prazo=17 ms
+t=  26 ms  mao=1 sensor=1 zona=0  ciclo: rearme=0 chegou=0  - -> RETOMADA  torque=ON  relogio_prazo=18 ms
+t=  27 ms  mao=1 sensor=1 zona=0  torque=ON  relogio_prazo=19 ms
+t=  28 ms  mao=1 sensor=1 zona=0  ciclo: rearme=0 chegou=0  - -> RETOMADA  torque=ON  relogio_prazo=20 ms
+t=  29 ms  mao=1 sensor=1 zona=0  torque=ON  relogio_prazo=21 ms
+t=  30 ms  mao=1 sensor=1 zona=0  ciclo: rearme=0 chegou=0  - -> RETOMADA  torque=ON  relogio_prazo=22 ms
+t=  31 ms  mao=1 sensor=1 zona=0  torque=ON  relogio_prazo=23 ms
+t=  32 ms  mao=1 sensor=1 zona=0  ciclo: rearme=0 chegou=0  - -> RETOMADA  torque=ON  relogio_prazo=24 ms
+t=  33 ms  mao=1 sensor=1 zona=0  torque=ON  relogio_prazo=25 ms
+t=  34 ms  mao=1 sensor=1 zona=0  ciclo: rearme=0 chegou=0  - -> RETOMADA  torque=ON  relogio_prazo=26 ms
+t=  35 ms  mao=1 sensor=1 zona=0  torque=ON  relogio_prazo=27 ms
+t=  36 ms  mao=1 sensor=1 zona=0  ciclo: rearme=0 chegou=0  - -> RETOMADA  torque=ON  relogio_prazo=28 ms
+t=  37 ms  mao=1 sensor=1 zona=0  torque=ON  relogio_prazo=29 ms
+t=  38 ms  mao=1 sensor=1 zona=0  ciclo: rearme=0 chegou=0  - -> RETOMADA  torque=ON  relogio_prazo=30 ms
+t=  39 ms  mao=1 sensor=1 zona=0  torque=ON  relogio_prazo=31 ms
+t=  40 ms  mao=1 sensor=1 zona=0  ciclo: rearme=0 chegou=0  - -> RETOMADA  torque=ON  relogio_prazo=32 ms
+t=  41 ms  mao=1 sensor=1 zona=0  torque=ON  relogio_prazo=33 ms
+t=  42 ms  mao=1 sensor=1 zona=0  ciclo: rearme=0 chegou=0  - -> RETOMADA  torque=ON  relogio_prazo=34 ms
+t=  43 ms  mao=1 sensor=1 zona=0  torque=ON  relogio_prazo=35 ms
+t=  44 ms  mao=1 sensor=1 zona=0  ciclo: rearme=0 chegou=0  - -> RETOMADA  torque=ON  relogio_prazo=36 ms
+t=  45 ms  mao=1 sensor=1 zona=0  torque=ON  relogio_prazo=37 ms
+t=  46 ms  mao=1 sensor=1 zona=0  ciclo: rearme=0 chegou=0  - -> RETOMADA  torque=ON  relogio_prazo=38 ms
+t=  47 ms  mao=1 sensor=1 zona=0  torque=ON  relogio_prazo=39 ms
+t=  48 ms  mao=1 sensor=1 zona=0  ciclo: rearme=0 chegou=0  - -> RETOMADA  torque=ON  relogio_prazo=40 ms
+t=  49 ms  mao=1 sensor=1 zona=0  torque=ON  relogio_prazo=41 ms
+t=  50 ms  mao=1 sensor=1 zona=0  ciclo: rearme=0 chegou=0  - -> RETOMADA  torque=ON  relogio_prazo=42 ms
+t=  51 ms  mao=1 sensor=1 zona=0  torque=ON  relogio_prazo=43 ms
+t=  52 ms  mao=1 sensor=1 zona=0  ciclo: rearme=0 chegou=0  - -> RETOMADA  torque=ON  relogio_prazo=44 ms
+t=  53 ms  mao=1 sensor=1 zona=0  torque=ON  relogio_prazo=45 ms
+t=  54 ms  mao=1 sensor=1 zona=0  ciclo: rearme=0 chegou=0  - -> RETOMADA  torque=ON  relogio_prazo=46 ms
+t=  55 ms  mao=1 sensor=1 zona=0  torque=ON  relogio_prazo=47 ms
+t=  56 ms  mao=1 sensor=1 zona=0  ciclo: rearme=0 chegou=0  - -> RETOMADA  torque=ON  relogio_prazo=48 ms
+t=  57 ms  mao=1 sensor=1 zona=0  torque=ON  relogio_prazo=49 ms
+t=  58 ms  mao=1 sensor=1 zona=0  ciclo: rearme=0 chegou=0  - -> RETOMADA  torque=ON  relogio_prazo=50 ms
+t=  59 ms  mao=1 sensor=1 zona=0  torque=ON  relogio_prazo=51 ms
+t=  60 ms  mao=1 sensor=1 zona=0  ciclo: rearme=0 chegou=0  - -> RETOMADA  torque=ON  relogio_prazo=52 ms
+t=  61 ms  mao=1 sensor=1 zona=0  torque=ON  relogio_prazo=53 ms
+t=  62 ms  mao=1 sensor=1 zona=0  ciclo: rearme=0 chegou=0  - -> RETOMADA  torque=ON  relogio_prazo=54 ms
+t=  63 ms  mao=1 sensor=1 zona=0  torque=ON  relogio_prazo=55 ms
+t=  64 ms  mao=1 sensor=1 zona=0  ciclo: rearme=0 chegou=0  - -> RETOMADA  torque=ON  relogio_prazo=56 ms
+t=  65 ms  mao=1 sensor=1 zona=0  torque=ON  relogio_prazo=57 ms
+t=  66 ms  mao=1 sensor=1 zona=0  ciclo: rearme=0 chegou=0  - -> RETOMADA  torque=ON  relogio_prazo=58 ms
+t=  67 ms  mao=1 sensor=1 zona=0  torque=ON  relogio_prazo=59 ms
+t=  68 ms  mao=1 sensor=1 zona=0  ciclo: rearme=0 chegou=0  - -> RETOMADA  torque=ON  relogio_prazo=60 ms
+t=  69 ms  mao=1 sensor=1 zona=0  torque=ON  relogio_prazo=61 ms
+t=  70 ms  mao=1 sensor=1 zona=0  ciclo: rearme=0 chegou=0  - -> RETOMADA  torque=ON  relogio_prazo=62 ms
+t=  71 ms  mao=1 sensor=1 zona=0  torque=ON  relogio_prazo=63 ms
+t=  72 ms  mao=1 sensor=1 zona=0  ciclo: rearme=0 chegou=0  - -> RETOMADA  torque=ON  relogio_prazo=64 ms
+t=  73 ms  mao=1 sensor=1 zona=0  torque=ON  relogio_prazo=65 ms
+t=  74 ms  mao=1 sensor=1 zona=0  ciclo: rearme=0 chegou=0  - -> RETOMADA  torque=ON  relogio_prazo=66 ms
+t=  75 ms  mao=1 sensor=1 zona=0  torque=ON  relogio_prazo=67 ms
+t=  76 ms  mao=1 sensor=1 zona=0  ciclo: rearme=0 chegou=0  - -> RETOMADA  torque=ON  relogio_prazo=68 ms
+t=  77 ms  mao=1 sensor=1 zona=0  torque=ON  relogio_prazo=69 ms
+t=  78 ms  mao=1 sensor=1 zona=0  ciclo: rearme=0 chegou=0  - -> RETOMADA  torque=ON  relogio_prazo=70 ms
+t=  79 ms  mao=1 sensor=1 zona=0  torque=ON  relogio_prazo=71 ms
+t=  80 ms  mao=1 sensor=1 zona=0  ciclo: rearme=0 chegou=0  - -> RETOMADA  torque=ON  relogio_prazo=72 ms
+t=  81 ms  mao=1 sensor=1 zona=0  torque=ON  relogio_prazo=73 ms
+t=  82 ms  mao=1 sensor=1 zona=0  ciclo: rearme=0 chegou=0  - -> RETOMADA  torque=ON  relogio_prazo=74 ms
+t=  83 ms  mao=1 sensor=1 zona=0  torque=ON  relogio_prazo=75 ms
+t=  84 ms  mao=1 sensor=1 zona=0  ciclo: rearme=0 chegou=0  - -> RETOMADA  torque=ON  relogio_prazo=76 ms
+t=  85 ms  mao=1 sensor=1 zona=0  torque=ON  relogio_prazo=77 ms
+t=  86 ms  mao=1 sensor=1 zona=0  ciclo: rearme=0 chegou=0  - -> RETOMADA  torque=ON  relogio_prazo=78 ms
+t=  87 ms  mao=1 sensor=1 zona=0  torque=ON  relogio_prazo=79 ms
+t=  88 ms  mao=1 sensor=1 zona=0  ciclo: rearme=0 chegou=0  - -> RETOMADA  torque=ON  relogio_prazo=80 ms
+t=  89 ms  mao=1 sensor=1 zona=0  torque=ON  relogio_prazo=81 ms
+t=  90 ms  mao=1 sensor=1 zona=0  ciclo: rearme=0 chegou=0  - -> RETOMADA  torque=ON  relogio_prazo=82 ms
+t=  91 ms  mao=1 sensor=1 zona=0  torque=ON  relogio_prazo=83 ms
+t=  92 ms  mao=1 sensor=1 zona=0  ciclo: rearme=0 chegou=0  - -> RETOMADA  torque=ON  relogio_prazo=84 ms
+t=  93 ms  mao=1 sensor=1 zona=0  torque=ON  relogio_prazo=85 ms
+t=  94 ms  mao=1 sensor=1 zona=0  ciclo: rearme=0 chegou=0  - -> RETOMADA  torque=ON  relogio_prazo=86 ms
+t=  95 ms  mao=1 sensor=1 zona=0  torque=ON  relogio_prazo=87 ms
+t=  96 ms  mao=1 sensor=1 zona=0  ciclo: rearme=0 chegou=0  - -> RETOMADA  torque=ON  relogio_prazo=88 ms
+t=  97 ms  mao=1 sensor=1 zona=0  torque=ON  relogio_prazo=89 ms
+t=  98 ms  mao=1 sensor=1 zona=0  ciclo: rearme=0 chegou=0  - -> RETOMADA  torque=ON  relogio_prazo=90 ms
+t=  99 ms  mao=1 sensor=1 zona=0  torque=ON  relogio_prazo=91 ms
+t= 100 ms  mao=1 sensor=1 zona=0  ciclo: rearme=0 chegou=0  - -> RETOMADA  torque=ON  relogio_prazo=92 ms
+t= 101 ms  mao=1 sensor=1 zona=0  torque=ON  relogio_prazo=93 ms
+t= 102 ms  mao=1 sensor=1 zona=0  ciclo: rearme=0 chegou=0  - -> RETOMADA  torque=ON  relogio_prazo=94 ms
+t= 103 ms  mao=1 sensor=1 zona=0  torque=ON  relogio_prazo=95 ms
+t= 104 ms  mao=1 sensor=1 zona=0  ciclo: rearme=0 chegou=0  - -> RETOMADA  torque=ON  relogio_prazo=96 ms
+t= 105 ms  mao=1 sensor=1 zona=0  torque=ON  relogio_prazo=97 ms
+t= 106 ms  mao=1 sensor=1 zona=0  ciclo: rearme=0 chegou=0  - -> RETOMADA  torque=ON  relogio_prazo=98 ms
+t= 107 ms  mao=1 sensor=1 zona=0  torque=ON  relogio_prazo=99 ms
+t= 108 ms  mao=1 sensor=1 zona=0  ciclo: rearme=0 chegou=0  - -> RETOMADA  torque=ON  relogio_prazo=100 ms
+t= 109 ms  mao=1 sensor=1 zona=0  torque=ON  relogio_prazo=101 ms  <<< VIOLAÇÃO P1

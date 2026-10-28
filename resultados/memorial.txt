@@ -1,0 +1,60 @@
+(a) MODELO EM ESPAÇO DE ESTADOS E CONSTANTES DE TEMPO
+    x = [i, w]^T, u = V, d = T_L, y = w
+    A = [[-R/L, -Ke/L], [Kt/J, -b/J]] = [[-666.6667, -70.8333], [202.3810, -0.357143]]
+    B = [1/L, 0]^T = [833.3333, 0]^T   E = [0, -1/J]^T = [0, -2380.9524]^T   C = [0 1]
+    det(sI - A) = s^2 + 667.0238 s + 14573.41 = 0
+    autovalores: -644.409 e -22.615 rad/s
+    tau_e = 1/|l1| = 1.5518 ms   (L/R = 1.500 ms)
+    tau_m = 1/|l2| = 44.218 ms   (R J/(R b + Kt Ke) = 45.745 ms)
+    separação de escalas: tau_m / tau_e = 28.5
+    Co = [B AB]: posto 2, det = 1.405e+08  -> controlável
+    Ob = [C; CA]: posto 2, det = -202.4  -> observável
+
+(b) PONTO DE OPERAÇÃO CRÍTICO (regime: di/dt = dw/dt = 0)
+    i = (b w + T_L)/Kt = (0.00015*450 + 0.25)/0.085 = 3.7353 A (46.7 % de i_max)
+    V = R i + Ke w = 0.8*3.7353 + 0.085*450 = 2.988 + 38.25 = 41.238 V
+    folga de tensão = 48 - 41.238 = 6.762 V (14.1 %)
+    folga de corrente = 8 - 3.735 = 4.265 A
+    velocidade máxima possível com a carga: 528.3 rad/s
+
+(c) PERÍODO DE AMOSTRAGEM
+    N = tau_m / Ts = 44.22 / 2 = 22.1 amostras por constante de tempo
+    faixa usual de 10 a 20 amostras/tau -> Ts entre 2.21 e 4.42 ms
+    tau_e / Ts = 0.78: a dinâmica elétrica NÃO é resolvida pelo laço de posição
+
+CONTROLADOR (degrau de 0,1 rad na junta = 10 rad no motor)
+    ganhos: {'Kp': 10.1, 'Ki': 125.0, 'Kd': 0.23, 'Tf': 0.001, 'beta': 0.55, 'Kaw': 0.3}
+    pior caso nos 9 cenários: OS = 2.81 %, ts = 218 ms, |i| = 7.33 A, |V| = 11.93 V
+    sem anti-windup: OS = 94.3 %, ts = inf
+    laço linear: cruzamento 64.5 rad/s (10.3 Hz), margem de fase 51.8 graus (com atraso de 1,5 Ts), 49 amostras por período de cruzamento
+
+IDENTIFICAÇÃO (ensaio emulado com ruído, validação cruzada)
+    R   nominal 0.8  estimado 0.8009  erro +0.11 %
+    L   nominal 0.0012  estimado 0.0012  erro -0.01 %
+    Ke  nominal 0.085  estimado 0.08499  erro -0.01 %
+    Kt  nominal 0.085  estimado 0.08499  erro -0.01 %
+    J   nominal 0.00042  estimado 0.0004188  erro -0.28 %
+    b   nominal 0.00015  estimado 0.0001513  erro +0.84 %
+    ajuste NRMSE na validação: w 98.7 %, i 99.8 %
+
+(d) PRAZO DE 100 ms (REQ-SAFE-AA-001)
+    latência = atraso_sensor + espera_ativação + 2*ciclos_perdidos + execução + corte_torque
+    pior caso = 20 + 2 + 2*1 + 0,2 + 7.76 = 31.96 ms  (64320 combinações)
+    todas <= 100 ms: True   margem = 68.04 ms
+    para violar seriam precisos 36 ciclos perdidos seguidos ou atraso de sensor > 88.0 ms
+    model checking v1: 32011 estados, 349694 transições; P1..P4 = True, True, True, True; pior latência 31 ms
+    model checking v0: viola P1 (REQ-SAFE-AA-001) (traço de 109 ms)
+
+REQ-SAFE-AA-004 (parte física)
+    limite: w_motor <= N v/r = 100*0.25/0.35 = 71.4 rad/s; referência colaborativa 60.7 rad/s
+    de 450 rad/s (1.57 m/s) até o limite em 666 ms; depois, v máx = 249 mm/s
+    campo de alerta mínimo (K = 1,6 m/s, ISO 13855): 1.10 m
+
+(e) EQUIVALÊNCIA MODELO x CÓDIGO C GERADO (SIL)
+    3801 amostras; erro máx vs modelo float32 = 0 V (bit a bit idênticos: True)
+    erro máx vs modelo float64 = 3.605e-04 V = 63.0 eps relativos a 48 V; cota teórica 6.21e-04 V
+
+RECURSOS NO ALVO (Cortex-M4F)
+    .text = 692 bytes (0.26 % de 256 KB)
+    219 instruções em linha reta (sem laços) -> cota 3.91 us a 168 MHz (1.96 % do orçamento)
+    host x86-64: 17.25 ns por ciclo (controlador + supervisor)
